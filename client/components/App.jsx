@@ -35,12 +35,12 @@ class App extends React.Component {
 
   render() {
     const {backgroundColorR, backgroundColorG, backgroundColorB, ColorR, ColorG, ColorB} = this.state
-    // const isBackgroundRed = true;
+   
      return (
-    <div class="wrapper" style={{backgroundColor: `rgb(${backgroundColorR},${backgroundColorG},${backgroundColorB})`, transition: 'background-color 2s'}}>
-    <div class="container">
-      <h1   style= {{color: `rgb(${ColorR},${ColorG},${ColorB})`, transition: 'color 1s'}}>Ima let you finish!</h1>
-  
+    <div className="wrapper" style={{backgroundColor: `rgb(${backgroundColorR},${backgroundColorG},${backgroundColorB})`, transition: 'background-color 2s'}}>
+    <div className="container" >
+      <h1 className="title"   style= {{color: `rgb(${ColorR},${ColorG},${ColorB})`, transition: 'color 1s'}}>Ima let you finish, But?</h1>
+      <KanyeQuote />
       </div>
     </div> 
    
