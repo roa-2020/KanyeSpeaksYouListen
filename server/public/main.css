@@ -28,7 +28,8 @@ body {
 		-1px -1px 0 #000,
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        1px 1px 0 #000;
+    height: 50px;
 }
 
 .title{
@@ -41,7 +42,6 @@ body {
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
-    
 }
 
 .button {
@@ -53,6 +53,7 @@ body {
     background: transparent;
     border: none;
     outline: none;
+    padding-top: 30px;
 }
 
 .kanyehead {
