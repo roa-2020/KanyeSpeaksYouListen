@@ -19,6 +19,7 @@ export default class KanyeQuote extends React.Component {
                 this.setState({
                     quoteInfo: quotedata,
                 })
+
         })
     }
 
@@ -29,8 +30,11 @@ export default class KanyeQuote extends React.Component {
 
         return (
             <>
-                <p>{quote.quote}</p>
-
+                <div className="textDiv">
+                    <p className="quoteText">{quote.quote}</p>
+                </div>   
+                
+                    <button onClick={this.inputStatedata} className="button"><img className="kanyehead" src="https://i.imgur.com/iqwjK8t.png" alt=""/></button>
             </>
         )    
     }

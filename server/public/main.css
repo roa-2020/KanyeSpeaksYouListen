@@ -1,4 +1,4 @@
-#bodycontainer {
+body {
     height: 100%;
     width: 100%;
 }
@@ -9,11 +9,57 @@
 }
 
 .wrapper {
+    height: 2000px;
+    width: 100%;
+}
+
+.container {
     height: 100%;
     width: 100%;
 }
 
-body {
-    height: 100%;
-    width: 100%;
+.quoteText{
+    padding-top: 100px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 22px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+.title{
+    padding-top: 150px;
+    text-align: center; 
+    font-family: 'Modak', cursive;
+    font-size: 75px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    
+}
+
+.button {
+    align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.kanyehead {
+    height: 100px;
+    width: auto;
+}
+
+.textdiv {
+    width: 300px;
 }
