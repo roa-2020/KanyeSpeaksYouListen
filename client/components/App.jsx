@@ -1,6 +1,7 @@
 import React from 'react'
 import KanyeQuote from './KanyeQuote'
-
+// import styles from './animated-image.module.scss'
+import Float from './Float'
 
 
 class App extends React.Component {
@@ -38,10 +39,16 @@ class App extends React.Component {
    
      return (
     <div className="wrapper" style={{backgroundColor: `rgb(${backgroundColorR},${backgroundColorG},${backgroundColorB})`, transition: 'background-color 2s'}}>
-    <div className="container" >
-      <h1 className="title"   style= {{color: `rgb(${ColorR},${ColorG},${ColorB})`, transition: 'color 1s'}}>Ima let you finish, But?</h1>
-      <KanyeQuote />
-      </div>
+        
+        <div className="container" >
+          <h1 className="title"   style= {{color: `rgb(${ColorR},${ColorG},${ColorB})`, transition: 'color 1s'}}>Ima let you finish, But?</h1>
+          <KanyeQuote />
+        </div>
+
+        <div>
+          {Array(13).fill(0).map(item => <Float />)}
+        </div>
+
     </div> 
    
   )}

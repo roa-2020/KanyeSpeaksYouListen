@@ -1,4 +1,5 @@
 import React from 'react'
+// import styles from './animated-image.module.scss'
 
 import { getKanyequote } from '../api/kanye'
 
@@ -6,6 +7,7 @@ export default class KanyeQuote extends React.Component {
 
     state = {
         quoteInfo: {},
+        wobble: 0,
     }
 
     componentDidMount() {
@@ -17,14 +19,22 @@ export default class KanyeQuote extends React.Component {
             .then((quotedata) => {
             console.log(quotedata)
                 this.setState({
+                  
                     quoteInfo: quotedata,
                 })
 
         })
     }
 
-    render() {
+    setWobble = (wobble) => {
+        console.log(wobble)
+        this.setState({
+            wobble: wobble,
+        })
+    }
 
+    render() {
+        
         const quote = this.state.quoteInfo
 
 
@@ -34,7 +44,13 @@ export default class KanyeQuote extends React.Component {
                     <p className="quoteText">{quote.quote}</p>
                 </div>   
                 
-                    <button onClick={this.inputStatedata} className="button"><img className="kanyehead" src="https://i.imgur.com/iqwjK8t.png" alt=""/></button>
+                    <button type="submit" onClick={this.inputStatedata} className="button">
+                        <img className="image kanyehead" src="https://i.imgur.com/iqwjK8t.png" alt="" 
+                            onClick={() => this.setWobble(1)}
+                            onAnimationEnd={() => this.setWobble(0)}
+                            wobble={this.state.wobble}
+                        />
+                    </button>
             </>
         )    
     }
